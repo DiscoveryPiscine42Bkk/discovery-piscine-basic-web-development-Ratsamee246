@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>SNCF Sandwich Menu</title>
+    <link rel="stylesheet" href="menu.css">
+</head>
+<body>
+    <nav class="sncf-menu">
+        <ul>
+            <li class="menu-main">Sandwich
+                <ul class="dropdown">
+                    <li>Ham</li>
+                    <li>Cheese</li>
+                    <li>Butter</li>
+                    <li>Baguette</li>
+                    <li>Pickles</li>
+                </ul>
+            </li>
+            <li class="menu-main">Drinks
+                <ul class="dropdown">
+                    <li>Water</li>
+                    <li>Coffee</li>
+                    <li>Tea</li>
+                </ul>
+            </li>
+            <li class="menu-main">Dessert
+                <ul class="dropdown">
+                    <li>Chocolate Bar</li>
+                    <li>Fruit</li>
+                </ul>
+            </li>
+        </ul>
+    </nav>
+</body>
+</html>
+body {
+    background: #f8f8f8;
+    font-family: 'Segoe UI', Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+}
+
+.sncf-menu {
+    margin: 60px auto;
+    width: max-content;
+}
+
+.sncf-menu ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    display: flex;
+    background: #e2001a;
+    border-radius: 12px;
+    box-shadow: 0 4px 16px rgba(0,0,0,0.08);
+}
+
+.sncf-menu > ul > li.menu-main {
+    position: relative;
+    padding: 18px 36px;
+    color: #fff;
+    cursor: pointer;
+    font-weight: bold;
+    transition: background 0.2s;
+    border-radius: 12px 12px 0 0;
+}
+
+.sncf-menu > ul > li.menu-main:hover {
+    background: #b80016;
+}
+
+.sncf-menu .dropdown {
+    display: none;
+    position: absolute;
+    left: 0;
+    top: 100%;
+    background: #fff;
+    min-width: 180px;
+    border-radius: 0 0 12px 12px;
+    box-shadow: 0 8px 24px rgba(0,0,0,0.10);
+    z-index: 10;
+}
+
+.sncf-menu > ul > li.menu-main:hover .dropdown {
+    display: block;
+}
+
+.sncf-menu .dropdown li {
+    color: #333;
+    padding: 12px 24px;
+    cursor: pointer;
+    transition: background 0.2s;
+    border-bottom: 1px solid #eee;
+}
+
+.sncf-menu .dropdown li:last-child {
+    border-bottom: none;
+}
+
+.sncf-menu .dropdown li:hover {
+    background: #ffe5ea;
+    color: #e2001a;
+}
