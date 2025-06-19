@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+  <meta charset="UTF-8">
+  <title>SNCF Sandwich Menu</title>
+  <style>
+    body {
+      font-family: 'Segoe UI', sans-serif;
+      background: linear-gradient(#f5f5f5, #ddd);
+      margin: 0;
+      padding: 0;
+      height: 100vh;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+    }
+
+    .menu-container {
+      background: #fff;
+      border: 2px solid #cc0033;
+      border-radius: 8px;
+      width: 260px;
+      box-shadow: 0 4px 12px rgba(0,0,0,0.1);
+      overflow: hidden;
+    }
+
+    .menu-title {
+      background-color: #cc0033;
+      color: white;
+      padding: 16px;
+      text-align: center;
+      font-size: 1.2em;
+      font-weight: bold;
+    }
+
+    .dropdown {
+      position: relative;
+      display: block;
+    }
+
+    input[type="checkbox"] {
+      display: none;
+    }
+
+    .dropdown-label {
+      display: block;
+      padding: 14px 16px;
+      background-color: #eee;
+      cursor: pointer;
+      border-top: 1px solid #ddd;
+    }
+
+    .dropdown-label:hover {
+      background-color: #ddd;
+    }
+
+    .dropdown-menu {
+      max-height: 0;
+      overflow: hidden;
+      transition: max-height 0.4s ease;
+      background-color: #f9f9f9;
+    }
+
+    input[type="checkbox"]:checked ~ .dropdown-menu {
+      max-height: 500px;
+    }
+
+    .dropdown-menu li {
+      list-style: none;
+      padding: 12px 16px;
+      border-top: 1px solid #ccc;
+      transition: background-color 0.3s ease;
+    }
+
+    .dropdown-menu li:hover {
+      background-color: #ececec;
+    }
+
+    .dropdown-menu li::before {
+      content: "🥪 ";
+    }
+  </style>
+</head>
+<body>
+
+  <div class="menu-container">
+    <div class="menu-title">Menu SNCF Sandwich</div>
+
+    <div class="dropdown">
+      <label class="dropdown-label" for="menu-toggle">Choisir votre sandwich ↓</label>
+      <input type="checkbox" id="menu-toggle" />
+      <ul class="dropdown-menu">
+        <li>Jambon-beurre classique</li>
+        <li>Fromage & cornichons</li>
+        <li>Végétarien (sans lard)</li>
+        <li>Thon mayo express</li>
+        <li>Option sans gluten</li>
+      </ul>
+    </div>
+  </div>
+
+</body>
+</html>
